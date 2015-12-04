@@ -2,7 +2,6 @@
   <% if @album.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@album.errors.count, "error") %> prohibited this album from being saved:</h2>
-
       <ul>
       <% @album.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -16,8 +15,8 @@
     <%= f.text_field :album_name %>
   </div>
   <div class="field">
-    <%= f.label :artist_id %><br />
-    <%= f.number_field :artist_id %>
+    <%= f.label :artist %><br /> 
+    <%= f.collection_select :artist_id, Artist.all, :id, :artist_name, prompt: true %>
   </div>
   <div class="actions">
     <%= f.submit %>
