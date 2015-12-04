@@ -16,8 +16,8 @@
     <%= f.text_field :song_name %>
   </div>
   <div class="field">
-    <%= f.label :album_id %><br />
-    <%= f.number_field :album_id %>
+    <%= f.label :album %><br />
+    <%= f.collection_select :album_id, Album.all, :id, :album_name, prompt: true %>
   </div>
   <div class="actions">
     <%= f.submit %>

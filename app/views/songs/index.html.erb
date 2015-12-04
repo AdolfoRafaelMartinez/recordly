@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <th>Song name</th>
+    <th>Song</th>
     <th>Album</th>
     <th></th>
     <th></th>
@@ -12,7 +12,7 @@
 <% @songs.each do |song| %>
   <tr>
     <td><%= song.song_name %></td>
-    <td><%= song.album_id %></td>
+    <td><%= Album.find(song.album_id).album_name %></td>
     <td><%= link_to 'Show', song %></td>
     <td><%= link_to 'Edit', edit_song_path(song) %></td>
     <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
