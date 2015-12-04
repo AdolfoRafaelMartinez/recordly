@@ -2,8 +2,8 @@
 
 <table>
   <tr>
-    <th>Favorite</th>
     <th>Album</th>
+    <th>Favorite</th>
     <th>Artist</th>
     <th></th>
     <th></th>
@@ -12,8 +12,8 @@
 
 <% @albums.each do |album| %>
   <tr>
-    <td><%= album.favorite %></td>
     <td><%= album.album_name %></td>
+    <td><%= album.favorite %></td>
     <td><%= Artist.find(album.artist_id).artist_name %></td>
     <td><%= link_to 'Show', album %></td>
     <td><%= link_to 'Edit', edit_album_path(album) %></td>

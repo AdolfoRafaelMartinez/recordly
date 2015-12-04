@@ -2,8 +2,8 @@
 
 <table>
   <tr>
-    <th>Favorite</th>
     <th>Artist</th>
+    <th>Favorite</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,8 +11,8 @@
 
 <% @artists.each do |artist| %>
   <tr>
-    <td><%= artist.favorite %></td>
     <td><%= artist.artist_name %></td>
+    <td><%= artist.favorite %></td>
     <td><%= link_to 'Show', artist %></td>
     <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
     <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>

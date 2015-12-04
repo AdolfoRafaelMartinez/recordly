@@ -1,18 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Album:</b>
-  <%= @album.album_name %>
-</p>
-<p>
   <b>Favorite:</b>
   <%= @album.favorite %>
+</p>
+<p>
+  <b>Album:</b>
+  <%= @album.album_name %>
 </p>
 
 <p>
   <b>Artist:</b>
   <%= @artist.artist_name %>
 </p>
+
+songs:
+<ul>
+<% @songs.each do |song| %>
+  <li><%= song.song_name %></li>
+<% end %>
+</ul>
 
 
 <%= link_to 'Edit', edit_album_path(@album) %> |

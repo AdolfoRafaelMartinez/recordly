@@ -15,6 +15,7 @@ class AlbumsController < ApplicationController
   def show
     @album = Album.find(params[:id])
     @artist = Artist.find @album.artist_id
+    @songs = Song.where album_id: @album.id
 
     respond_to do |format|
       format.html # show.html.erb
