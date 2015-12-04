@@ -1,0 +1,7 @@
+<h1>Search artists, albums, and songs</h1>
+<p></p>
+
+<%= form_tag("/search", method: "post") do %>
+  <%= text_field_tag(:query_string) %>
+  <%= submit_tag("Search") %>
+<% end %>

@@ -1,4 +1,53 @@
-<h1>Search artists, albums, and songs</h1>
+<table>
+  <tr>
+    <th>Artists</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @artists.each do |artist| %>
+  <tr>
+    <td><%= artist.artist_name %></td>
+    <td><%= link_to 'Show', artist %></td>
+    <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
+    <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
 <p></p>
-<%= text_field_tag :search_string %>
-<%= submit_tag :go %>
+<table>
+  <tr>
+    <th>Albums</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @albums.each do |album| %>
+  <tr>
+    <td><%= album.album_name %></td>
+    <td><%= link_to 'Show', album %></td>
+    <td><%= link_to 'Edit', edit_album_path(album) %></td>
+    <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<p></p>
+<table>
+  <tr>
+    <th>Songs</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @songs.each do |song| %>
+  <tr>
+    <td><%= song.song_name %></td>
+    <td><%= link_to 'Show', song %></td>
+    <td><%= link_to 'Edit', edit_song_path(song) %></td>
+    <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
