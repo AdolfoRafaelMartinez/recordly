@@ -4,6 +4,12 @@
   <b>Artist name:</b>
   <%= @artist.artist_name %>
 </p>
+albums:
+<ul>
+<% @albums.each do |album| %>
+  <li><%= album.album_name %></li>
+<% end %>
+</ul>
 
 
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
