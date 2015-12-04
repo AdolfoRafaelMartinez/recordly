@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Favorite</th>
     <th>Song</th>
     <th>Album</th>
     <th></th>
@@ -11,6 +12,7 @@
 
 <% @songs.each do |song| %>
   <tr>
+    <td><%= song.favorite %></td>
     <td><%= song.song_name %></td>
     <td><%= Album.find(song.album_id).album_name %></td>
     <td><%= link_to 'Show', song %></td>

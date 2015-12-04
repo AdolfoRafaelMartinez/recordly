@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :favorite %><br />
+    <%= f.check_box :favorite %>
+  </div>
+
+  <div class="field">
     <%= f.label :song_name %><br />
     <%= f.text_field :song_name %>
   </div>
