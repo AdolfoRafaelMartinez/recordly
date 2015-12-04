@@ -1,7 +1,6 @@
 <h1>Listing songs</h1>
 only favorites: <%= check_box_tag :favorites_switch %>
 <p></p>
-
 <table>
   <tr>
     <th>Song</th>
@@ -24,6 +23,9 @@ only favorites: <%= check_box_tag :favorites_switch %>
 <% end %>
 </table>
 
-<br />
+<p></p>
 
 <%= link_to 'New Song', new_song_path %>
+
+<p></p>
+<%= link_to 'Search', get_query_path %>

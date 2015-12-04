@@ -1,4 +1,5 @@
 Recordly::Application.routes.draw do
+  root to: 'songs#index'
   resources :songs
   resources :albums
   resources :artists
