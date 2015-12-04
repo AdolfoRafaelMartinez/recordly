@@ -1,6 +1,6 @@
 Work to do
 ---------------
-add user login
+add user login and session variables
 add validations to models
 add testing at unit, functional, and integration levels
 change search from like % to "searchable do block" to be more efficient
